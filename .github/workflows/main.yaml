@@ -11,8 +11,10 @@ jobs:
     - run: |-
         pip install \
          feedparser \
-         git+https://github.com/zulip/python-zulip-api.git#subdirectory=zulip
+         markdownify \
+         git+https://github.com/i-ky/python-zulip-api.git@markdownify#subdirectory=zulip
         $HOME/.local/share/zulip/integrations/rss/rss-bot \
+         --markdownify \
          --site '${{ secrets.zulip_organization_url }}' \
          --api-key '${{ secrets.zulip_bot_key }}' \
          --user '${{ secrets.zulip_bot_email }}' \
