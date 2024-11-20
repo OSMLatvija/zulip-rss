@@ -11,7 +11,7 @@ jobs:
     - run: |-
         pip install \
          feedparser \
-         markdownify \
+         markdownify==0.12.1 \
          git+https://github.com/i-ky/python-zulip-api.git@markdownify#subdirectory=zulip
         $HOME/.local/share/zulip/integrations/rss/rss-bot \
          --markdownify \
