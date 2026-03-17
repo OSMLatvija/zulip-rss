@@ -19,6 +19,7 @@ jobs:
          --api-key '${{ secrets.zulip_bot_key }}' \
          --user '${{ secrets.zulip_bot_email }}' \
          --feed-file rss-feeds \
+         --max-batch-size 100 \
          --data-dir data/ \
          --stream RSS
         git config --global user.email "zulip-rss-bot@users.noreply.github.com"
